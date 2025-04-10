@@ -13,7 +13,7 @@ build:
 .PHONY: run
 run:
 	@echo "Running Docker container..."
-	docker run -d --name $(CONTAINER_NAME) $(IMAGE_NAME)
+	docker run -d --network application-network --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
 .PHONY: update
 update:
